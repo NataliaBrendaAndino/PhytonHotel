@@ -1,22 +1,18 @@
-body {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
-/*----------------*/
-/*Estilos Menu/
-/*----------------*/
-
-/* Estilos para el menu */ /*probar de poner el menu y el principio unidos y despues fijar el menu*/ 
+/*Estilos Menu*/
 
 .menu {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     background-color: #548dbb;
     color: #FFFFFF;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -64,50 +60,77 @@ body {
     width: 3vw;
 }
 
-/*----------------*/
+
+
 /*Estilos Habitaciones*/
-/*----------------*/
 
-
-
-
-/*----------------*/
-/*Estilos para las habitaciones*/
-/*----------------*/
-
-.hab{
-    display: flex;  
-    padding: 30px; 
-    height: 300px; 
-}
-.hab div{
-    margin: 10px;
-}
-.hab img{
-    height: 300px;
-    width: 500px;
+.titulo-habitaciones{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
 }
 
-.hab1{
-    display: flex;  
-    padding: 30px; 
-    height: 300px; 
-}
-.hab1 div{
-    margin: 10px;
-}
-.hab1 img{
-    width: 500px;
-    height: 300px;
+.habitaciones {
+    display: flex;
+    flex-direction: column;
 }
 
+.habitacion {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.habitacion-img {
+    width: 50%;
+    text-align: center;
+    
+}
+
+.habitacion-img img {
+    max-width: 70%;
+    height: auto;
+}
+
+.habitacion-text {
+    display: block;
+    width: 50%;
+    padding: 0 20px;
+}
+
+.habitacion-text p {
+    font-size: 16px;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid black; /* Borde negro de 1 píxel */
+    color: #000; /* Cambia el color del texto a negro */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Cambia el color de fondo al pasar el ratón */
+}
+
+.habitaciones .habitacion:nth-child(1),
+.habitaciones .habitacion:nth-child(3) {
+    background-color:rgb(237, 243, 241);
+}
 
 
 
 
-/*----------------*/
+
+
 /*Estilos footer*/
-/*----------------*/
 
 .contenedor-footer {
     display: flex;
@@ -127,3 +150,5 @@ body {
 .contenedor-footer ul {
     list-style: none;
 }
+
+

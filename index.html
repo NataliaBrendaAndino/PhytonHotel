@@ -20,15 +20,37 @@
             <div>
                 <ul>
                     <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="Habitacion.html">HABITACIONES</a></li>
-                    <li><a href="Servicios.html">SERVICIOS</a></li>
-                    <li><a href="galeria.html">GALERIA</a></li>
+                    <li><a href="./pages/Habitacion.html">HABITACIONES</a></li>
+                    <li><a href="./pages/Servicios.html">SERVICIOS</a></li>
+                    <li><a href="./pages/galeria.html">GALERIA</a></li>
                     <li><a href="#contactanos">CONTACTO</a></li>
                 </ul>
             </div>
             <div class="reservar">
-                <a href="Reservar.html">RESERVAR</a>
+                <a id="reservar-link" href="Reservar.html">RESERVAR</a>
                 <img src="Img/notificacion.png" alt="Campana">
+                <audio id="campana-audio" src="/sound/call-to-attention-123107.mp3"></audio>
+                <script>
+                    const campana = document.querySelector(".reservar img");
+                    const reservarLink = document.getElementById("reservar-link");
+                    const campanaAudio = document.getElementById("campana-audio");
+            
+                    campana.addEventListener("click", () => {
+                        campanaAudio.play();
+                    });
+            
+                    reservarLink.addEventListener("click", (e) => {
+                        e.preventDefault(); // Evita la navegación predeterminada
+                        campanaAudio.play();
+                        setTimeout(() => {
+                            // Redirige a la página "Reservar.html" después de que termine el sonido
+                            window.location.href = reservarLink.href;
+                        }, campanaAudio.duration * 1000); // Espera la duración del sonido en milisegundos antes de redirigir
+                    });
+                </script>
+            </div>
+            
+                  
             </div>
         </section>
 
